@@ -1,0 +1,870 @@
+/*GLOBAL RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #001e42;
+    background-color: #f4f6fa;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+
+/*HEADER & NAVBAR */
+
+
+header {
+    background: #001e42;
+    padding: 16px 5%;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+nav {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    color: #ffffff;
+}
+
+
+/* NAVIGATION LINKS */
+
+nav ul {
+    display: flex;
+
+    align-items: center;
+    gap: 32px;
+
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+
+    color: #e5edf8;
+    font-size: 1rem;
+
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #60a5fa;
+}
+
+
+
+/* HOME / HERO SECTION */
+
+
+.home-section {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 48px;
+
+    width: 100%;
+    min-height: 560px;
+
+    padding: 64px 8%;
+
+    background: #001e42;
+    color: #ffffff;
+}
+
+
+/* HERO CONTENT - LEFT SIDE */
+
+.home-division {
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    flex: 1 1 0;
+    min-width: 0;
+
+    max-width: 600px;
+}
+
+
+/* GREETING */
+
+.home-greeting {
+    color: #60a5fa;
+
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+
+/* NAME */
+
+.home-title {
+    color: #ffffff;
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+}
+
+.home-title span {
+    color: #3b82f6;
+}
+
+
+/* ROLE */
+
+.home-role {
+    color: #e5edf8;
+
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+}
+
+
+/* DESCRIPTION */
+
+.home-description {
+    max-width: 480px;
+
+    color: #cbd5e1;
+
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+
+
+/*HERO BUTTONS */
+
+
+.home-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: 16px;
+
+    margin-top: 12px;
+}
+
+
+/* COMMON BUTTON */
+
+.btn {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 12px 24px;
+
+    border: 1px solid #2078f7;
+    border-radius: 8px;
+
+    background: #2078f7;
+    color: #ffffff;
+
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
+
+
+/* PRIMARY BUTTON HOVER */
+
+.btn:hover {
+    background: #125ed0;
+    border-color: #125ed0;
+
+    transform: translateY(-2px);
+}
+
+
+/* SECONDARY BUTTON */
+
+.home-buttons .btn:nth-child(2) {
+    background: transparent;
+    border-color: #94a3b8;
+}
+
+.home-buttons .btn:nth-child(2):hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+
+/* PROFILE IMAGE - RIGHT SIDE */
+
+
+.home-image-division {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex: 0 1 320px;
+
+    min-width: 0;
+}
+
+.home-division {
+    order: 1;
+}
+
+.home-image-division {
+    order: 2;
+}
+
+
+/* IMAGE WRAPPER */
+
+.profile-image {
+    width: 100%;
+    max-width: 320px;
+
+    aspect-ratio: 1 / 1;
+
+    border: 5px solid #3b82f6;
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background: #e2e8f0;
+}
+
+
+/* IMAGE */
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+
+
+/* ABOUT SECTION */
+
+
+.about-section {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 48px;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 64px 8%;
+
+    background: #f4f6fa;
+}
+
+
+/* ABOUT INFORMATION */
+
+.about-information {
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+
+/* ABOUT HEADING */
+
+.about-heading {
+    color: #2563eb;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+/* ABOUT TITLE */
+
+.about-title {
+    margin-top: 16px;
+
+    color: #001e42;
+
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    line-height: 1.3;
+}
+
+
+/* ABOUT SEPARATOR */
+
+.about-seperator {
+    width: 48px;
+    height: 3px;
+
+    margin-top: 16px;
+
+    background: #2563eb;
+    border: none;
+}
+
+
+/* ABOUT DESCRIPTION */
+
+.about-description {
+    margin-top: 16px;
+
+    max-width: 500px;
+
+    color: #475569;
+
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+
+/* DOWNLOAD RESUME */
+
+.btn-download-resume {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 24px;
+    padding: 12px 20px;
+
+    border: 1px solid #2078f7;
+    border-radius: 8px;
+
+    background: transparent;
+    color: #1264d8;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.btn-download-resume:hover {
+    background: #2078f7;
+    color: #ffffff;
+}
+
+
+
+/* SKILLS SECTION */
+
+.about-myskills {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+
+/* SKILLS TITLE */
+
+.skill-title {
+    margin-bottom: 20px;
+
+    color: #001e42;
+    font-size: 1.7rem;
+}
+
+
+/* SKILLS CONTAINER */
+
+.skills-container {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+
+    width: 100%;
+}
+
+
+/* INDIVIDUAL SKILL CARD */
+
+.skill {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1 1 100px;
+
+    max-width: 130px;
+    min-height: 110px;
+
+    padding: 16px 10px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    background: #ffffff;
+    color: #001e42;
+
+    box-shadow: 0 4px 12px rgba(0, 30, 66, 0.05);
+
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* SKILL ICON */
+
+.skill img {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+
+    margin-bottom: 8px;
+}
+
+
+/* SKILL NAME */
+
+.skill span {
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+/* SKILL HOVER */
+
+.skill:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 18px rgba(0, 30, 66, 0.12);
+}
+
+
+/* CONTACT SECTION */
+
+.contact-section {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 64px 8%;
+
+    background: #dbeafe;
+}
+
+
+/* CONTACT MAIN WRAPPER */
+
+.contact-division {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 32px;
+
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* CONTACT INFORMATION */
+
+.contact-information {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    max-width: 650px;
+}
+
+
+/* CONTACT HEADING */
+
+.contact-heading {
+    color: #2563eb;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+/* CONTACT TITLE */
+
+.contact-title {
+    margin-top: 8px;
+
+    color: #001e42;
+
+    font-size: clamp(1.8rem, 3vw, 2.3rem);
+}
+
+
+/* CONTACT DESCRIPTION */
+
+.contact-description {
+    margin-top: 16px;
+
+    color: #334155;
+
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+
+
+/* CONTACT CARDS */
+
+.contact-details {
+    width: 100%;
+}
+
+
+/* CONTACT CARDS CONTAINER */
+
+.contacts-container {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 16px;
+
+    width: 100%;
+}
+
+
+/* INDIVIDUAL CONTACT CARD */
+
+.contact {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1 1 180px;
+
+    min-width: 0;
+    max-width: 260px;
+
+    padding: 24px 16px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    background: #ffffff;
+    color: #001e42;
+
+    text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0, 30, 66, 0.05);
+
+    transition: transform 0.3s ease;
+}
+
+
+/* CONTACT ICON */
+
+.contact img {
+    width: 36px;
+    height: 36px;
+
+    object-fit: contain;
+
+    margin-bottom: 12px;
+}
+
+
+/* CONTACT LABEL */
+
+.contact p {
+    margin-bottom: 4px;
+
+    font-weight: 600;
+}
+
+
+/* CONTACT LINK */
+
+.contact a {
+    color: #475569;
+
+    font-size: 0.9rem;
+    text-decoration: none;
+
+    overflow-wrap: anywhere;
+}
+
+.contact a:hover {
+    color: #2563eb;
+}
+
+
+/* CONTACT CARD HOVER */
+
+.contact:hover {
+    transform: translateY(-4px);
+}
+
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background: #001e42;
+    color: #cbd5e1;
+
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+
+/* TABLET RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+
+    header {
+        padding: 16px 5%;
+    }
+
+    nav ul {
+        gap: 16px;
+    }
+
+
+    /* HOME SECTION */
+
+    .home-section {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 40px;
+
+        padding: 48px 6%;
+    }
+
+    .home-division {
+        flex: 1 1 auto;
+
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .home-description {
+        max-width: 100%;
+    }
+
+
+    /* PROFILE IMAGE */
+
+    .home-image-division {
+        flex: 0 1 auto;
+
+        width: 100%;
+        align-self: center;
+    }
+
+    .profile-image {
+        max-width: 260px;
+    }
+
+
+    /* ABOUT SECTION */
+
+    .about-section {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 40px;
+
+        padding: 48px 6%;
+    }
+
+    .about-information,
+    .about-myskills {
+        width: 100%;
+    }
+
+
+    /* SKILLS */
+
+    .skills-container {
+        justify-content: flex-start;
+    }
+
+
+    /* CONTACT SECTION */
+
+    .contact-section {
+        padding: 48px 6%;
+    }
+
+    .contact {
+        flex: 1 1 200px;
+    }
+}
+
+
+/* SMALL MOBILE RESPONSIVE */
+
+@media (max-width: 480px) {
+
+    /* NAVBAR */
+
+    header {
+        padding: 14px 5%;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 0.85rem;
+    }
+
+
+    /* HOME SECTION */
+
+    .home-section {
+        padding: 40px 5%;
+        gap: 32px;
+    }
+
+    .home-title {
+        font-size: 2.5rem;
+    }
+
+    .home-role {
+        font-size: 1.4rem;
+    }
+
+    .home-description {
+        font-size: 0.95rem;
+    }
+
+
+    /* HERO BUTTONS */
+
+    .home-buttons {
+        gap: 12px;
+    }
+
+    .btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+
+
+    /* PROFILE IMAGE */
+
+    .profile-image {
+        max-width: 220px;
+    }
+
+
+    /* ABOUT SECTION */
+
+    .about-section {
+        padding: 40px 5%;
+    }
+
+    .about-title {
+        font-size: 1.7rem;
+    }
+
+
+    /* SKILLS */
+
+    .skills-container {
+        gap: 12px;
+    }
+
+    .skill {
+        flex: 1 1 90px;
+
+        max-width: 130px;
+        min-height: 100px;
+    }
+
+
+    /* CONTACT SECTION */
+
+    .contact-section {
+        padding: 40px 5%;
+    }
+
+    .contact {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
