@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #d62460;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0F172A;
+}
+
+.logo {
+    width: 45px;
+    border-radius: 10px;
+
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-button {
+    background: linear-gradient(to right, #d62460, #640625);
+    color: whitesmoke;
+    padding: 5px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-right: 20px;
+}
