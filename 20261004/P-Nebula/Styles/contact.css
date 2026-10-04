@@ -1,0 +1,151 @@
+/* ==========================================================================
+   CONTACT US PAGE STYLESHEET (contact.css)
+   Contains layout, form inputs, button styling, and responsive designs
+   specifically for the Contact Us page.
+   ========================================================================== */
+
+/* CONTACT PAGE CONTAINER WIDTH */
+
+/* Centers the contact section with an 85% width and 1140px max-width boundary */
+.contact-section {
+    width: 85%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 120px;
+}
+
+/* Two-column split layout placing the 3D graphic on left and form on right */
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* Left column container centering the 3D artwork */
+.contact-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Fluid responsive scaling for the contact 3D graphic */
+.contact-img img {
+    max-width: 100%;
+    max-height: 480px;
+    object-fit: contain;
+}
+
+/* Right column containing the contact title, subtitle, and input form */
+.contact-content {
+    width: 50%;
+}
+
+/* Main bold heading for Contact Us */
+.contact-content h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #030303;
+    margin-bottom: 12px;
+}
+
+/* Subtitle inviting users to reach out */
+.contact-subtitle {
+    font-size: 1.05rem;
+    color: #555555;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* Vertical form layout with consistent spacing between fields */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form group holding the label and input/textarea field */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Form field label text styling */
+.form-group label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333333;
+}
+
+/* Clean, modern white input and textarea fields with soft border and comfortable padding */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #202020;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Blue outline focus effect when user clicks into an input field */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3164f4;
+    box-shadow: 0 0 0 3px rgba(49, 100, 244, 0.15);
+}
+
+/* Allows vertical resizing only for textarea */
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Primary solid blue submit button */
+.button-send {
+    background-color: #3164f4;
+    color: #ffffff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: flex-start;
+    transition: opacity 0.2s;
+}
+
+/* Slight opacity change on button hover */
+.button-send:hover {
+    opacity: 0.92;
+}
+
+/* RESPONSIVE MEDIA QUERIES (TABLETS & MOBILE) */
+
+@media (max-width: 960px) {
+    /* Stacks the 3D artwork and contact form vertically on smaller screens */
+    .contact-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contact-img,
+    .contact-content {
+        width: 100%;
+    }
+
+    .contact-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .button-send {
+        width: 100%;
+    }
+}

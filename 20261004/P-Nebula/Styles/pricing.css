@@ -1,0 +1,327 @@
+/* ==========================================================================
+   PRICING PAGE STYLESHEET (pricing.css)
+   Contains all specific layouts, cards, typography, and responsive styles
+   for the Pricing page and Feature Comparison matrix.
+   ========================================================================== */
+
+/* PRICING PAGE SHARED CONTAINERS */
+
+/* Centers pricing sections uniformly with an 85% width and 1140px maximum boundary */
+.pricing-header,
+.pricing-section,
+.compare-section,
+.faq-section {
+    width: 85%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* PRICING PAGE HEADER */
+
+/* Top and bottom margin for the pricing title and introductory description */
+.pricing-header {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Large display title for the pricing section */
+.pricing-header h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #030303;
+    margin-bottom: 15px;
+}
+
+/* Subtitle explaining the honest and balanced pricing model */
+.pricing-header p {
+    font-size: 1.05rem;
+    color: #555555;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+/* PRICING 3-TIER CARDS SECTION */
+
+/* Outer spacing for the 3-column pricing tier cards */
+.pricing-section {
+    margin-bottom: 100px;
+}
+
+/* Flexbox container distributing 3 plan cards with equal spacing */
+.pricing-grid {
+    display: flex;
+    gap: 25px;
+    align-items: stretch;
+    justify-content: center;
+}
+
+/* Individual white plan card with rounded corners, subtle border, and soft drop shadow */
+.pricing-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 32px;
+    flex: 1;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Featured / Pro tier card styling with prominent shadow, subtle enlargement, and blue accent */
+.pricing-card.featured {
+    border-color: #3164f4;
+    box-shadow: 0 20px 45px rgba(49, 100, 244, 0.12);
+    transform: scale(1.03);
+    z-index: 2;
+}
+
+/* Pill badge at top-right corner highlighting the most popular plan */
+.popular-badge {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background-color: #3164f4;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+/* Plan category name (Basic, Pro, Business) */
+.plan-name {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #030303;
+    margin-bottom: 24px;
+}
+
+/* Price presentation container aligning currency symbol, large amount, and recurring period */
+.plan-price {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+/* Dollar currency symbol positioned at the top edge of the price */
+.plan-price .currency {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #030303;
+    margin-right: 4px;
+}
+
+/* Large bold price number for clear visibility */
+.plan-price .amount {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #030303;
+}
+
+/* Recurring billing period label (/month) */
+.plan-price .period {
+    font-size: 0.95rem;
+    color: #777777;
+    margin-left: 6px;
+}
+
+/* Short descriptive summary of target audience for each plan */
+.plan-desc {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.5;
+    margin-bottom: 35px;
+    min-height: 48px;
+}
+
+/* Secondary dark-outlined action button on regular pricing cards */
+.button-card-outline {
+    width: 100%;
+    margin-top: auto;
+    background: #ffffff;
+    color: #111111;
+    border: 1px solid #111111;
+    padding: 13px 20px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Solid blue primary action button on the featured Pro pricing card */
+.button-card-primary {
+    width: 100%;
+    margin-top: auto;
+    background-color: #3164f4;
+    color: #ffffff;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* FEATURE COMPARISON MATRIX SECTION */
+
+/* Spacing wrapper for the feature comparison matrix */
+.compare-section {
+    margin-bottom: 120px;
+}
+
+/* Main heading for the feature comparison section */
+.compare-section h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #030303;
+    margin-bottom: 40px;
+}
+
+/* 3-column CSS grid matching the 3 plan tiers */
+.compare-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Individual plan column in the comparison table */
+.compare-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Plan column title in the comparison table */
+.compare-col h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #030303;
+    margin-bottom: 24px;
+}
+
+/* Unordered list holding checkmark feature items */
+.feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Individual row with checkmark badge and feature label */
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: #222222;
+    font-weight: 500;
+}
+
+/* Circular solid blue checkmark icon badge */
+.check-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #3164f4;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* FREQUENTLY ASKED QUESTIONS SECTION */
+
+/* Spacing and flex column layout for the FAQ block */
+.faq-section {
+    margin-bottom: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Centered 3D question mark artwork wrapper */
+.faq-img {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Restricts the 3D question mark graphic size for crisp display */
+.faq-img img {
+    max-width: 140px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Bold FAQ title heading */
+.faq-section h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #030303;
+    margin-bottom: 45px;
+}
+
+/* Constrained width container for the accordion questions */
+.faq-list {
+    width: 100%;
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Individual question item with horizontal alignment, clean bottom border divider, and comfortable padding */
+.faq-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #e2e2e2;
+    cursor: pointer;
+}
+
+/* Bold and legible question title typography */
+.faq-question {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111111;
+    text-align: left;
+}
+
+/* Downward arrow indicator on the right */
+.faq-chevron {
+    font-size: 0.85rem;
+    color: #444444;
+    transition: transform 0.2s;
+}
+
+/* RESPONSIVE STYLES FOR PRICING (TABLETS & MOBILE) */
+
+@media (max-width: 960px) {
+    /* Stacks pricing cards vertically on smaller devices */
+    .pricing-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Resets scale enlargement on featured card to preserve mobile flow */
+    .pricing-card.featured {
+        transform: none;
+    }
+
+    /* Stacks 3-column comparison matrix into a single column layout */
+    .compare-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}

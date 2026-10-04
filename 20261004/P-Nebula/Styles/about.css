@@ -1,0 +1,247 @@
+/* ==========================================================================
+   ABOUT US PAGE STYLESHEET (about.css)
+   Contains layout, typography, section spacing, and responsive designs
+   specifically for the About Us page (Hero, Mission, and Efficiency sections).
+   ========================================================================== */
+
+/* ABOUT PAGE SHARED CONTAINER WIDTH */
+
+/* Centers about page specific sections with an 85% width and 1140px max-width boundary */
+.about-hero,
+.mission-section,
+.team-section,
+.efficiency-section {
+    width: 85%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ABOUT HERO / INTRO SECTION */
+
+/* Spacing and flex column layout to stack header text over the centered team artwork */
+.about-hero {
+    margin-top: 50px;
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Centered introductory text wrapper */
+.about-header {
+    max-width: 680px;
+    margin-bottom: 40px;
+}
+
+/* Main bold display heading for About Us */
+.about-header h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #030303;
+    margin-bottom: 15px;
+}
+
+/* Subtitle explaining the company vision and industry solutions */
+.about-header p {
+    font-size: 1.05rem;
+    color: #555555;
+    line-height: 1.6;
+}
+
+/* Container centering the team 3D illustration */
+.about-hero-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive scaling for the about hero 3D graphic */
+.about-hero-img img {
+    max-width: 100%;
+    max-height: 440px;
+    object-fit: contain;
+}
+
+/* OUR MISSION SECTION */
+
+/* Centered content box for the company mission statement */
+.mission-section {
+    text-align: center;
+    max-width: 760px;
+    margin-bottom: 130px;
+}
+
+/* Mission section title */
+.mission-section h2 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #030303;
+    margin-bottom: 20px;
+}
+
+/* Mission statement paragraph with comfortable relaxed line spacing */
+.mission-section p {
+    font-size: 1.05rem;
+    color: #555555;
+    line-height: 1.7;
+}
+
+/* WORK EFFICIENTLY SPLIT SECTION */
+
+/* Outer spacing for the split efficiency section */
+.efficiency-section {
+    margin-bottom: 130px;
+}
+
+/* Two-column flex container placing the large stacked heading on the left and 3D graphic on right */
+.efficiency-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Left column holding the big stacked display text */
+.efficiency-content {
+    width: 50%;
+}
+
+/* Very bold, large display typography with natural stacked line breaks */
+.efficiency-content h2 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #030303;
+    line-height: 1.15;
+}
+
+/* Right column centering the 3D illustration */
+.efficiency-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive scaling for the efficiency 3D graphic */
+.efficiency-img img {
+    max-width: 100%;
+    max-height: 440px;
+    object-fit: contain;
+}
+
+/* TEAM SECTION */
+
+/* Spacing and centered alignment for the team showcase section */
+.team-section {
+    margin-bottom: 140px;
+    text-align: center;
+}
+
+/* Header container holding team section title and subtitle */
+.team-header {
+    margin-bottom: 50px;
+}
+
+/* Bold display title for the team section */
+.team-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #030303;
+    margin-bottom: 12px;
+}
+
+/* Subtitle introducing the team members */
+.team-header p {
+    font-size: 1.05rem;
+    color: #555555;
+}
+
+/* 4-column grid arranging 8 team members into two clean rows */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px 30px;
+}
+
+/* Individual team member card */
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Circular avatar container with overflow hidden */
+.member-photo {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Ensures member photo covers the circle evenly without distortion */
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Team member's full name */
+.team-member h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #030303;
+    margin-bottom: 4px;
+}
+
+/* Team member's role / job title */
+.team-member p {
+    font-size: 0.9rem;
+    color: #666666;
+    font-weight: 500;
+}
+
+/* RESPONSIVE MEDIA QUERIES (TABLETS & MOBILE) */
+
+@media (max-width: 960px) {
+    /* Stacks the efficiency section vertically on smaller screens */
+    .efficiency-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .efficiency-content,
+    .efficiency-img {
+        width: 100%;
+    }
+
+    .efficiency-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .mission-section h2 {
+        font-size: 2rem;
+    }
+
+    /* Stacks team grid to 2 columns on tablet devices */
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 20px;
+    }
+}
+
+@media (max-width: 560px) {
+    /* Stacks team grid to single column on mobile devices */
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}

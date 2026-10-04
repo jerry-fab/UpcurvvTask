@@ -1,0 +1,816 @@
+/* GLOBAL RESET & BASE STYLES */
+
+/* Resets default browser margins/paddings and standardizes box-sizing to 
+border-box so padding doesn't affect total width */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Sets the soft-gray page background, modern sans-serif typography, smooth anchor scrolling, 
+and default text color */
+
+html {
+    background-color: #ededed;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+    color: #202020;
+}
+
+/* Removes default link underlines and sets a clean dark charcoal text color */
+
+a {
+    text-decoration: none;
+    color: #202020;
+}
+
+/* SHARED LAYOUT CONTAINER & COMMON BUTTONS */
+
+/* Centers all main page sections with a consistent 85% width and 1140px 
+max-width boundary for a uniform layout */
+
+.navbar-container,
+.hero,
+.trusted-end,
+.intro,
+.trusted,
+.cost,
+.features,
+.testimonals,
+.getstarted,
+.footer-container {
+    width: 85%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Primary solid blue call-to-action button 
+used for key actions (Try for free, Sign up) */
+
+.button-tryfree {
+    background-color: #3164f4;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Secondary dark outlined button with transparent 
+background for secondary actions */
+
+.button-works,
+.button-outline {
+    background: transparent;
+    color: #111;
+    border: 1px solid #111;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Small uppercase muted category label to introduce 
+section topics (e.g. SMARTSAVE, COSTSAVER) */
+
+.section-tag {
+    letter-spacing: 1.5px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #888888;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* NAVIGATION BAR */
+
+/* Full-width container header wrapper */
+header {
+    width: 100%;
+}
+
+/* 3-column CSS Grid to neatly arrange: [Logo on left] 
+[Nav links in middle] [User actions on right] */
+
+.navbar-container {
+    height: 90px;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+}
+
+/* Brand logo styling with bold weight and right 
+margin separation */
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 40px;
+    color: #111;
+}
+
+/* Horizontal flex menu holding page navigation links */
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Navigation menu link font size and medium weight */
+.navbar-menu a {
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Highlights the active page link and provides blue hover 
+feedback on all nav links */
+
+.navbar-menu a.active,
+.navbar-menu a:hover {
+    color: #3164f4;
+}
+
+/* Positions login link and signup button to the far 
+right edge of the header */
+
+.navbar-useroptions {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Subtle clean text styling for the login link */
+
+.navbar-useroptions a:first-child {
+    font-weight: 500;
+    color: #333;
+}
+
+/* Pill-shaped solid blue button for the header sign-up action */
+
+.navbar-useroptions a:nth-child(2) {
+    background-color: #3164f4;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* HERO SECTION */
+
+/* Top and bottom spacing for the main hero intro area */
+
+.hero {
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+/* Two-column flexbox layout placing text content on the left 
+and the 3D illustration on the right */
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Left container taking up 50% width for hero headline, 
+text, and button group */
+
+.hero-content {
+    width: 50%;
+}
+
+/* Small uppercase badge promoting the free 30-day trial */
+.hero-trial {
+    letter-spacing: 1.5px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #888888;
+    margin-bottom: 15px;
+}
+
+/* Main bold display headline stating the core product value proposition */
+.hero-description {
+    color: #030303;
+    font-size: 3.5rem;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+/* Sub-headline text describing the project with relaxed, readable line spacing */
+.hero-description2 {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Horizontal button group aligning "Try for free" and "See how it works" side-by-side */
+.useroptions-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Right container taking 50% width to center the 3D hero illustration */
+.hero-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Fluid image scaling preventing the hero illustration from exceeding 480px height */
+.hero-img img {
+    max-width: 100%;
+    max-height: 480px;
+    object-fit: contain;
+}
+
+/* TRUSTED BRAND LOGOS */
+
+/* Centered social-proof section showcasing trusted company logos */
+.trusted-end {
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Intro text label sitting above the client logos */
+.hero-descriptionend {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Flex row spreading logos evenly across the container with wrap support */
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Muted grayscale brand logo placeholder text styling */
+.t-logo {
+    color: #999;
+}
+
+.t-logo img{
+    width: 50px;
+    height: 50px;
+    object-fit:contain;
+}
+
+/* INTRO / SOLUTION CARD */
+
+/* Spacing wrapper for the introduction solution section */
+.intro {
+    margin-bottom: 120px;
+}
+
+/* White elevated card with generous padding, rounded corners, and subtle ambient drop shadow */
+.intro-container {
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    padding: 60px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+    gap: 40px;
+}
+
+/* Left half of the solution card holding title, description, and CTA button */
+.intro-content {
+    width: 50%;
+}
+
+/* Large bold title for the solution card */
+.intro-content h1 {
+    font-size: 2.8rem;
+    color: #030303;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+/* Descriptive paragraph text inside the solution card */
+.intro-content p {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Right half of card centering the solution 3D graphic */
+.intro-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Scales the solution 3D illustration smoothly inside the card */
+.intro-img img {
+    max-width: 100%;
+    max-height: 380px;
+    object-fit: contain;
+}
+
+/* SMARTSAVE (WORK IS SAFE) SECTION */
+
+/* Outer spacing for the SmartSave cloud security section */
+.trusted {
+    margin-bottom: 120px;
+}
+
+/* Two-column layout: [3D Graphic on Left] and [Security Features on Right] */
+.trusted-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Left column holding the SmartSave 3D illustration */
+.trusted-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Scales the SmartSave 3D illustration responsively */
+.trusted-img img {
+    max-width: 100%;
+    max-height: 480px;
+    object-fit: contain;
+}
+
+/* Right column containing the security heading, description, and "Try now" button */
+.trusted-content {
+    width: 50%;
+}
+
+/* Large bold title emphasizing data security and encryption */
+.trusted-content h1 {
+    font-size: 3rem;
+    color: #030303;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+/* Paragraph explaining cloud encryption protocols and privacy */
+.trusted-content .section-desc {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* COSTSAVER (COST SAVINGS) SECTION */
+
+/* Outer spacing for the CostSaver efficiency section */
+.cost {
+    margin-bottom: 140px;
+}
+
+/* Two-column layout: [Cost optimization text on Left] and [3D Graphic on Right] */
+.cost-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Left column holding the CostSaver features and CTA */
+.cost-content {
+    width: 50%;
+}
+
+/* Large bold title highlighting cost saving and workflow optimization */
+.cost-content h1 {
+    font-size: 3rem;
+    color: #030303;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+/* Paragraph detailing optimization algorithms and workflow analysis */
+.cost-content .section-desc {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Right column holding the CostSaver 3D illustration */
+.cost-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Scales the CostSaver 3D illustration responsively */
+.cost-img img {
+    max-width: 100%;
+    max-height: 480px;
+    object-fit: contain;
+}
+
+/* FEATURES / COMMUNITY ONBOARDING CARD */
+
+/* Outer container for the 3-step community onboarding section */
+.features {
+    margin-bottom: 120px;
+    position: relative;
+}
+
+/* Elevated white card; position: relative allows the floating 3D graphic to pop out over the top edge */
+.features-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+    gap: 60px;
+}
+
+/* Left column with top padding to leave room for the floating 3D graphic above */
+.features-left {
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 170px;
+    position: relative;
+}
+
+/* Positions the 3D graphic absolutely so it overlaps above the top edge of the card */
+.features-img {
+    position: absolute;
+    top: -140px;
+    left: 10px;
+    width: 360px;
+    max-width: 100%;
+}
+
+/* Crisp rendering and fluid scaling for the community 3D graphic */
+.features-img img {
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Bold headline inviting users to join the community */
+.features-left h2 {
+    font-size: 2.2rem;
+    color: #030303;
+    line-height: 1.25;
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+/* Subtitle explaining the 3-step optimization process */
+.features-desc {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Aligns the "Sign up now" button to the start of the left text column */
+.features-left button {
+    align-self: flex-start;
+}
+
+/* Right column organizing Step 1, Step 2, and Step 3 in a vertical list */
+.features-right {
+    width: 54%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Individual step container with bottom divider line */
+.step-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+/* Removes bottom border from the final step (Step 3) */
+.step-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Bold step number heading (Step 1, Step 2, Step 3) */
+.step-item h3 {
+    font-size: 1.3rem;
+    color: #030303;
+    font-weight: 700;
+}
+
+/* Descriptive explanation text for each onboarding step */
+.step-item p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* TESTIMONIALS SECTION */
+
+/* Outer spacing for the customer testimonials section */
+.testimonals {
+    margin-bottom: 120px;
+}
+
+/* Centered heading container holding the section title and description */
+.testimonals-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Main bold section title for Testimonials */
+.testimonals-header h1 {
+    font-size: 2.8rem;
+    color: #030303;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+/* Subtitle text introducing client feedback */
+.testimonals-header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Flex row spreading the 3 testimonial cards evenly across the width */
+.testimonals-cards {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+}
+
+/* White testimonial card with rounded corners, subtle shadow, and centered text */
+.t-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    flex: 1;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Customer quote text with minimum height for uniform card alignment */
+.t-quote {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    min-height: 50px;
+}
+
+/* 5 blue stars rating display */
+.t-stars {
+    color: #3164f4;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+/* Customer reviewer's full name */
+.t-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111;
+}
+
+/* Customer reviewer's role and company name */
+.t-role {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 4px;
+}
+
+/* GET STARTED (CALL TO ACTION) SECTION */
+
+/* Outer container for the bottom CTA card */
+.getstarted {
+    margin-bottom: 120px;
+}
+
+/* White elevated CTA card with two-column layout */
+.getstarted-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+    gap: 40px;
+}
+
+/* Left half of the card holding the CTA headline, description, and button */
+.getstarted-content {
+    width: 50%;
+}
+
+/* Final encouraging CTA headline */
+.getstarted-content h2 {
+    font-size: 2.5rem;
+    color: #030303;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+/* Final subtitle prompt */
+.getstarted-content p {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Right half of the card centering the Cv-6.png 3D graphic */
+.getstarted-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Scales the CTA 3D illustration cleanly without clipping */
+.getstarted-img img {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+
+/* FOOTER SECTION */
+
+/* Full-width white footer background with top divider line */
+footer {
+    background: #ffffff;
+    border-top: 1px solid #e5e5e5;
+    padding: 70px 0 40px 0;
+}
+
+/* 4-column flex layout spreading footer navigation groups evenly */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Individual vertical column for link groups */
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Restricts the brand column width for comfortable reading */
+.footer-col:first-child {
+    max-width: 320px;
+}
+
+/* Brand summary description text */
+.footer-desc {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Muted copyright text */
+.copyright {
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 20px;
+}
+
+/* Category heading for each footer column */
+.footer-col h4 {
+    font-size: 1rem;
+    color: #111;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* Footer link font size and dark text styling */
+.footer-col a {
+    font-size: 0.95rem;
+    color: #555;
+    transition: color 0.2s;
+}
+
+/* Blue hover accent on footer links */
+.footer-col a:hover {
+    color: #3164f4;
+}
+
+
+/* RESPONSIVE MEDIA QUERIES (TABLETS & MOBILE) */
+
+/* Stacks 2-column cards and split sections into clean vertical layouts on viewports below 960px */
+
+@media (max-width: 960px) {
+    .features-card {
+        flex-direction: column;
+        padding: 50px 40px;
+        gap: 40px;
+        margin-top: 50px;
+    }
+
+    .features-left {
+        width: 100%;
+        padding-top: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .features-img {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-top: -80px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .features-left button {
+        align-self: center;
+    }
+
+    .features-right {
+        width: 100%;
+    }
+
+    .hero-container,
+    .trusted-container,
+    .cost-container,
+    .intro-container,
+    .getstarted-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-content,
+    .hero-img,
+    .trusted-content,
+    .trusted-img,
+    .cost-content,
+    .cost-img,
+    .intro-content,
+    .intro-img,
+    .getstarted-content,
+    .getstarted-img {
+        width: 100%;
+    }
+
+    .useroptions-container {
+        justify-content: center;
+    }
+
+    .testimonals-cards {
+        flex-direction: column;
+    }
+
+    /* Stacks footer columns on tablet/mobile screens */
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+}

@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Nebulla</title>
+    <link rel="stylesheet" href="./Styles/styles.css" />
+    <link rel="stylesheet" href="./Styles/contact.css" />
+  </head>
+
+  <body>
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+      <div class="navbar-container">
+        <div class="logo">Nebulla</div>
+
+        <nav class="navbar-menu">
+          <a href="index.html">Home</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html" class="active">Contact</a>
+        </nav>
+
+        <div class="navbar-useroptions">
+          <a href="#Login">Log in</a>
+          <a href="#Signup">Sign up</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- CONTACT US SECTION -->
+      <section class="contact-section">
+        <div class="contact-container">
+          
+          <!-- Left Column: 3D Illustration -->
+          <div class="contact-img">
+            <img src="Assets/Images/Cover-Images/Cv-9.png" alt="Contact Nebulla Support" />
+          </div>
+
+          <!-- Right Column: Contact Form -->
+          <div class="contact-content">
+            <h1>Contact Us</h1>
+            <p class="contact-subtitle">Explore the future with us. Feel free to get in touch.</p>
+
+            <form class="contact-form" action="#" method="POST" onsubmit="return false;">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Full Name" />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email address" />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" placeholder="How can we get better?"></textarea>
+              </div>
+
+              <button type="submit" class="button-send">Send message</button>
+            </form>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER (REUSED) -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-col">
+          <div class="logo">Nebulla</div>
+          <p class="footer-desc">The modern way to showcase and scale your digital projects.</p>
+          <p class="copyright">&copy; 2026 Nebulla. All rights reserved.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Social</h4>
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
