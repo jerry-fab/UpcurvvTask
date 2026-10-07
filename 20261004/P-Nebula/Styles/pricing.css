@@ -51,12 +51,12 @@
     margin-bottom: 100px;
 }
 
-/* Flexbox container distributing 3 plan cards with equal spacing */
+/* 3-column Grid distributing 3 plan cards with equal spacing */
 .pricing-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     align-items: stretch;
-    justify-content: center;
 }
 
 /* Individual white plan card with rounded corners, subtle border, and soft drop shadow */
@@ -307,11 +307,11 @@
 
 /* RESPONSIVE STYLES FOR PRICING (TABLETS & MOBILE) */
 
-@media (max-width: 960px) {
-    /* Stacks pricing cards vertically on smaller devices */
+@media (max-width: 991px) {
+    /* Tablet: 2-column layout (fewer cards) */
     .pricing-grid {
-        flex-direction: column;
-        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
     }
 
     /* Resets scale enlargement on featured card to preserve mobile flow */
@@ -323,5 +323,13 @@
     .compare-grid {
         grid-template-columns: 1fr;
         gap: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Mobile: Single-column layout (1 card per row) */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
     }
 }

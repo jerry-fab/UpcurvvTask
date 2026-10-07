@@ -17,6 +17,17 @@ html {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     scroll-behavior: smooth;
     color: #202020;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Removes default link underlines and sets a clean dark charcoal text color */
@@ -99,10 +110,11 @@ header {
 [Nav links in middle] [User actions on right] */
 
 .navbar-container {
-    height: 90px;
-    display: grid;
-    grid-template-columns: auto auto 1fr;
+    min-height: 90px;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 30px;
 }
 
 /* Brand logo styling with bold weight and right 
@@ -569,11 +581,11 @@ text, and button group */
     color: #666;
 }
 
-/* Flex row spreading the 3 testimonial cards evenly across the width */
+/* 3-column Grid spreading testimonial cards evenly across the width */
 .testimonals-cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-    justify-content: space-between;
 }
 
 /* White testimonial card with rounded corners, subtle shadow, and centered text */
@@ -740,11 +752,29 @@ footer {
 }
 
 
-/* RESPONSIVE MEDIA QUERIES (TABLETS & MOBILE) */
+/* =========================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================= */
 
-/* Stacks 2-column cards and split sections into clean vertical layouts on viewports below 960px */
+/* 1. LARGE DESKTOP (>= 1200px) */
+@media (min-width: 1200px) {
+    .navbar-container,
+    .hero,
+    .trusted-end,
+    .intro,
+    .trusted,
+    .cost,
+    .features,
+    .testimonals,
+    .getstarted,
+    .footer-container {
+        width: 88%;
+        max-width: 1240px;
+    }
+}
 
-@media (max-width: 960px) {
+/* 2. TABLET & LAPTOP (<= 991px) */
+@media (max-width: 991px) {
     .features-card {
         flex-direction: column;
         padding: 50px 40px;
@@ -763,7 +793,7 @@ footer {
         position: relative;
         top: 0;
         left: 0;
-        margin-top: -80px;
+        margin-top: -60px;
         margin-bottom: 20px;
         display: flex;
         justify-content: center;
@@ -800,17 +830,182 @@ footer {
         width: 100%;
     }
 
+    .hero-img img,
+    .trusted-img img,
+    .cost-img img,
+    .intro-img img,
+    .getstarted-img img {
+        max-height: 360px;
+    }
+
     .useroptions-container {
         justify-content: center;
     }
 
+    /* Tablet: 2-column card layout (fewer columns) */
     .testimonals-cards {
-        flex-direction: column;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
-    /* Stacks footer columns on tablet/mobile screens */
+    /* Tablet: 2-column footer layout (1-2 columns) */
     .footer-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 20px;
+    }
+}
+
+/* 3. SMALL TABLET & MOBILE NAVIGATION (<= 768px) */
+@media (max-width: 768px) {
+    .navbar-container {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 24px 0 16px 0;
+        gap: 18px;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+
+    .navbar-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .navbar-useroptions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+}
+
+/* 4. MOBILE SCREENS (< 576px) */
+@media (max-width: 576px) {
+    .navbar-container {
+        padding: 16px 0 10px 0;
+        gap: 12px;
+    }
+
+    .navbar-menu {
+        gap: 14px;
+    }
+
+    .navbar-menu a {
+        font-size: 0.9rem;
+    }
+
+    .navbar-useroptions {
+        gap: 12px;
+    }
+
+    .navbar-container,
+    .hero,
+    .trusted-end,
+    .intro,
+    .trusted,
+    .cost,
+    .features,
+    .testimonals,
+    .getstarted,
+    .footer-container {
+        width: 90%;
+        margin-bottom: 70px;
+    }
+
+    .hero {
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+
+    /* Mobile Typography adjustments */
+    .hero-description {
+        font-size: 2.1rem;
+        line-height: 1.25;
+    }
+
+    .hero-description2 {
+        font-size: 0.95rem;
+        margin-bottom: 24px;
+    }
+
+    .intro-content h1,
+    .features-left h2,
+    .testimonals-header h1,
+    .getstarted-content h2,
+    .cost-content h1,
+    .trusted-content h1 {
+        font-size: 1.85rem;
+        line-height: 1.25;
+    }
+
+    /* Card padding reduction for small viewports */
+    .intro-container,
+    .features-card,
+    .getstarted-card {
+        padding: 30px 20px;
+        border-radius: 18px;
         gap: 30px;
+    }
+
+    /* Mobile: 1-column card layout (single column) */
+    .testimonals-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .t-card {
+        padding: 30px 20px;
+        border-radius: 16px;
+    }
+
+    /* Full width buttons on mobile */
+    .useroptions-container {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .button-tryfree,
+    .button-works,
+    .button-outline {
+        width: 100%;
+        text-align: center;
+        padding: 14px 20px;
+    }
+
+    /* Scaled logos */
+    .logos {
+        gap: 20px;
+    }
+
+    .t-logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-img img,
+    .trusted-img img,
+    .cost-img img,
+    .intro-img img,
+    .getstarted-img img {
+        max-height: 240px;
+    }
+
+    /* Mobile: Single-column footer layout */
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    footer {
+        padding: 50px 0 30px 0;
     }
 }
